@@ -1,0 +1,21 @@
+$TTL    1
+@       IN      SOA     ns1.integration-testing.open-mpic.org. admin.integration-testing.open-mpic.org. (
+                              5         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         1 )       ; Negative Cache TTL
+;
+
+; Name servers
+integration-testing.open-mpic.org.    IN      NS      ns1.integration-testing.open-mpic.org.
+
+; A records for name servers
+ns1             IN      A       140.82.1.140
+
+; Other A records
+@               IN      A       140.82.1.140
+www             IN      A       140.82.1.140
+
+_acme-challenge.dns-01-leading-whitespace IN TXT " 7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo"
+_acme-challenge.dns-01-trailing-whitespace IN TXT "7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo "
