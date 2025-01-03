@@ -19,3 +19,4 @@ www             IN      A       140.82.1.140
 
 _acme-challenge.dns-01-leading-whitespace IN TXT " 7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo"
 _acme-challenge.dns-01-trailing-whitespace IN TXT "7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo "
+_acme-challenge.dns-01 IN TXT "7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo"
