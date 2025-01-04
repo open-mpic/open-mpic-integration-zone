@@ -28,4 +28,6 @@ _acme-challenge.dns-01-cname IN CNAME dns-01-cname-landing.integration-testing.o
 dns-01-cname-landing IN TXT "7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo"
 
 
-dns-change IN TXT "1234567890abcdefg:-_!"
+dns-change-txt IN TXT "1234567890abcdefg."
+dns-change-cname IN CNAME 1234567890abcdefg.
+dns-change-caa IN CAA 0 dnschange "1234567890abcdefg." 
