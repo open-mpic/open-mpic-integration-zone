@@ -30,4 +30,8 @@ dns-01-cname-landing IN TXT "7FwkJPsKf-TH54wu4eiIFA3nhzYaevsL7953ihy-tpo"
 
 dns-change-txt IN TXT "1234567890abcdefg."
 dns-change-cname IN CNAME 1234567890abcdefg.
-dns-change-caa IN CAA 0 dnschange "1234567890abcdefg." 
+dns-change-caa IN CAA 0 dnschange "1234567890abcdefg."
+
+dns-email-txt IN TXT "testadmin.email.txt@example.com"
+dns-email-txt-cname-target IN TXT "testadmin.cname.target@example.com"
+_contact-email IN CNAME dns-email-txt-cname-target.integration-testing.open-mpic.org.
