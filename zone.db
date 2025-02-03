@@ -32,6 +32,15 @@ dns-change-txt IN TXT "1234567890abcdefg."
 dns-change-cname IN CNAME 1234567890abcdefg.
 dns-change-caa IN CAA 0 dnschange "1234567890abcdefg."
 
-dns-email-txt IN TXT "testadmin.email.txt@example.com"
+_validation-contactemail.dns-email-txt IN TXT "testadmin.email.txt@example.com"
 dns-email-txt-cname-target IN TXT "testadmin.cname.target@example.com"
-_contact-email IN CNAME dns-email-txt-cname-target.integration-testing.open-mpic.org.
+_validation-contactemail.dns-email-txt-cname IN CNAME dns-email-txt-cname-target.integration-testing.open-mpic.org.
+
+_validation-contactemail.dns-email-txt-whitespace IN TXT " testadmin.email.txt.whitespace@example.com "
+
+_validation-contactemail.dns-email-txt-null-char IN TXT "\000testadmin.email.txt.null.char@example.com"
+
+_validation-contactemail.dns-email-txt-junk IN TXT "\"testadmin.email.txt.junk@example.com unknown_content"
+
+
+
