@@ -43,4 +43,10 @@ _validation-contactemail.dns-email-txt-null-char IN TXT "\000testadmin.email.txt
 _validation-contactemail.dns-email-txt-junk IN TXT "\"testadmin.email.txt.junk@example.com unknown_content"
 
 
+_validation-contactphone.dns-phone-txt IN TXT "+1-123-456-7890"
+dns-phone-cname-target IN TXT "+1-123-456-7890"
+_validation-contactphone.dns-phone-cname-txt IN CNAME dns-phone-cname-target.integration-testing.open-mpic.org.
+_validation-contactphone.dns-phone-txt-whitespace IN TXT "+1-123-456-7890 "
+
+
 
