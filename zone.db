@@ -32,6 +32,10 @@ dns-change-txt IN TXT "1234567890abcdefg."
 dns-change-cname IN CNAME 1234567890abcdefg.
 dns-change-caa IN CAA 0 dnschange "1234567890abcdefg."
 
+smime-standard IN CAA 129 issuemail "example-ca.example.com"
+smime-with-issue IN CAA 128 issue "example-ca1.example.com"
+smime-with-issue IN CAA 0 issuemail "example-ca2.example.com"
+
 _validation-contactemail.dns-email-txt IN TXT "testadmin.email.txt@example.com"
 dns-email-txt-cname-target IN TXT "testadmin.cname.target@example.com"
 _validation-contactemail.dns-email-txt-cname IN CNAME dns-email-txt-cname-target.integration-testing.open-mpic.org.
@@ -74,5 +78,4 @@ ip-address-cname-target IN A 1.2.3.4
 ip-address-multi IN A 5.6.7.8
 ip-address-multi IN A 1.2.3.4
 ip-address-v6 IN AAAA 2001:4860:4860::8888
-
 
