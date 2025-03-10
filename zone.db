@@ -48,5 +48,31 @@ dns-phone-cname-target IN TXT "+1-123-456-7890"
 _validation-contactphone.dns-phone-cname-txt IN CNAME dns-phone-cname-target.integration-testing.open-mpic.org.
 _validation-contactphone.dns-phone-txt-whitespace IN TXT "+1-123-456-7890 "
 
+contact-email-caa IN CAA 0 contactemail "caa.contactemail@example.com"
+contact-email-caa-critical IN CAA 128 contactemail "caa.contactemail@example.com"
+sub.contact-email-caa IN TXT "foo"
+contact-email-caa-cname-target IN CAA 0 contactemail "caa.contactemail@example.com"
+contact-email-caa-cname IN CNAME contact-email-caa-cname-target.integration-testing.open-mpic.org.
+contact-email-caa-multi IN CAA 0 contactemail "caa1.contactemail@example.com"
+contact-email-caa-multi IN CAA 128 contactemail "caa2.contactemail@example.com"
+contact-email-caa-multi IN CAA 128 issue "exampleca.example.com"
+contact-email-caa-whitespace IN CAA 0 contactemail "caa.contactemail@example.com "
+contact-email-caa-null IN CAA 0 contactemail "caa.contactemail@example.com\000"
+contact-email-no-record-set IN TXT "foo"
+
+
+contact-phone-caa IN CAA 0 contactphone "+1-123-456-7890"
+contact-phone-caa-multi IN CAA 128 contactemail "junk"
+contact-phone-caa-multi IN CAA 0 contactphone "junk\000"
+contact-phone-caa-multi IN CAA 0 contactphone "+1-123-456-7890"
+contact-phone-caa-critical IN CAA 128 contactphone "+1-123-456-7890"
+contact-phone-caa-whitespace IN CAA 0 contactphone "+1-123-456-7890 "
+
+ip-address IN A 1.2.3.4
+ip-address-cname IN CNAME ip-address-cname-target.integration-testing.open-mpic.org.
+ip-address-cname-target IN A 1.2.3.4
+ip-address-multi IN A 5.6.7.8
+ip-address-multi IN A 1.2.3.4
+ip-address-v6 IN AAAA 2001:4860:4860::8888
 
 
